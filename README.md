@@ -25,13 +25,17 @@ A comprehensive e-commerce platform built with Django, inspired by Amazon. This 
 ### Steps
 
 1. **Clone the repository:**
-   ```sh
+   ```
    git clone https://github.com/derekthedevil/arcitech_Assignment.git
+   ```
+   ```
    cd amazon
+   ```
 
 2. **Install requirements :**
-   ```
+    ```
     pip install -r requirements.txt
+    ```
 
 3. **Setup enviromental variables:** 
     
@@ -52,10 +56,10 @@ A comprehensive e-commerce platform built with Django, inspired by Amazon. This 
 3. **createsuperuser:** 
     ```
     cd amazon
-    
+    ``` 
     ```
     python manage.py createsuperuser 
-    
+    ```
 
     - enter the requreied prompts 
 
