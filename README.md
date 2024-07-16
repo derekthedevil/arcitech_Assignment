@@ -52,10 +52,11 @@ A comprehensive e-commerce platform built with Django, inspired by Amazon. This 
 3. **createsuperuser:** 
     ```
     cd amazon
+    
     ```
     python manage.py createsuperuser 
     
-    
+
     - enter the requreied prompts 
 
 4. **deploy** 
