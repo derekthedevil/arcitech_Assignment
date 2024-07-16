@@ -26,7 +26,7 @@ A comprehensive e-commerce platform built with Django, inspired by Amazon. This 
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/yourusername/amazon-ecom-platform.git
+   git clone https://github.com/derekthedevil/arcitech_Assignment.git
    cd amazon-ecom-platform 
 
 2. **Install requirements :**
@@ -53,6 +53,7 @@ A comprehensive e-commerce platform built with Django, inspired by Amazon. This 
     ```
     cd amazon
     python manage.py createsuperuser 
+    
     - enter the requreied prompts 
 
 4. **deploy** 
