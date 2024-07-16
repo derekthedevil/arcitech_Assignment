@@ -1,0 +1,60 @@
+{% extends "users/user_settings.html" %} {% block user_settings %}
+<div class="container bg-ligh" style="height: 30%">
+    <div class="row">
+        <form  method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+        <div class="col-4 mt-3 d-flex align-center">
+            <img src="{{user_info.image.url}}"
+                style="border-radius: 50%; object-fit: cover; " alt="" height="150px" width="150px"  />
+        </div>
+        <label for="image" class="form-label">profile</label>
+        <input type="file" class="form-control" id="image" name="image" value="{{user_info.image}}" aria-describedby="image" aria-label="Upload">
+    </div>
+    <div class="row">
+        <div class="col-6 mt-4 bg_mustar">
+            <div class="mb-3">
+                <label for="username" class="form-label">username</label>
+                <input type="text" class="form-control" id="username" name="username"
+                    value="{{user.username}}" required/>
+            </div>
+
+            <div class="mb-2">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" name="email" id="email"
+                    value="{{user.email}}" required/>
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone No.</label>
+                <input type="number" class="form-control" name="phone" id="phone"
+                    value="{{user_info.phone}}" required />
+            </div>
+        </div>
+        <div class="col-6 mt-4">
+            <div class="mb-3">
+                <label for="firstname" class="form-label">First Name</label>
+                <input type="text" class="form-control" name="firstname" id="firstname"
+                    value="{{user.first_name}}" required />
+            </div>
+            <div class="mb-3">
+                <label for="lastname" class="form-label">Last Name</label>
+                <input type="text" class="form-control" name="lastname" id="lastname"
+                    value="{{user.last_name}}" required />
+            </div>
+            <div class="mb-3">
+                <label for="pincode" class="form-label">pincode</label>
+                <input type="number" class="form-control" name="pincode" id="pincode" value="{{user_info.pincode}}" required/>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="mb-3">
+                <label for="address" class="form-label">Address</label>
+                <textarea class="form-control" id="address" name="address" rows="3" required >{{user_info.address}}</textarea>
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">save</button>
+    <button type="reset" class="btn btn-primary">reset</button>
+</form>
+</div>
+
+{% endblock user_settings %}

@@ -1,0 +1,39 @@
+{% extends "users/user_settings.html" %} 
+{% block user_settings %}
+<div class="container-fluid text-center">
+    <h1>Order history</h1>
+    <div class="row">
+        {% for i in orders %}
+            <div class="col-9 mx-auto border border-black rounded-2 my-2">
+                <table class="table table-hove">
+                    <thead>
+                      <tr class="text-center">
+                        <th scope="col">IMAGE</th>
+                        <th scope="col">NAME</th>
+                        <th scope="col">PRICE</th>
+                        <th scope="col">QUANTITY</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for order in i %}
+                      <tr class="text-center">
+                        <td>
+                          
+                          <img id="enlarge" src="{{order.product_id.images.url}}" alt="" width="40px" height="40px">
+                        </td>
+                        <td>{{order.product_id.name}}</td>
+                        <td>{{order.price}}</td>
+                        
+                        <td>{{order.quantity}}</td>
+                        
+                        
+                      </tr> 
+                      {% endfor %}
+                    </tbody>
+                  </table>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock user_settings %}
